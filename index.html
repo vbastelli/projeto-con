@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connessione Corretora de Seguros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <img src="img/conne.jpeg" class="logo" alt="Connessione Logo">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#foto">Home</a></li>
+                    <li><a href="#texto">Seguradoras</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <img src="img/conn.jpeg" id="foto" class="foto" alt="Connessione Image">
+
+    <div id="texto" class="texto">
+        <h1 class="titulo">Bem-vindo à Connessione Corretora de Seguros</h1>
+        <p class="corpo">Desde 1988, a Connessione é sua parceira confiável em seguros, oferecendo soluções personalizadas e serviço de alta qualidade. Valorizamos cada cliente e estamos comprometidos em proteger o que é mais importante para você. Conheça nossos serviços e descubra por que somos sua melhor escolha em seguros.</p>
+    </div>
+
+    <div id="card" class="card">
+        <h1 class="desde">Desde 1988</h1>
+        <div class="logos-seguradoras">
+            <div class="logo-seguradora">
+                <img src="img/portoseguro.png" alt="Logo Seguradora 1">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/azulseguros.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/allianz.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/bradesco.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/mitsui.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/suhai.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/tokio.jpg" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/mapfre.png" alt="Logo Seguradora 2">
+            </div>
+            <div class="logo-seguradora">
+                <img src="img/liberty.png" alt="Logo Seguradora 2">
+            </div>
+        </div>
+        <button class="cotacao">Solicite uma cotação</button>
+    </div>
+    
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <form action="enviar_email.php" method="POST" class="formulario-contato">
+            <div class="campo-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="campo-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="campo-form">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="location">
+                <h3>Localização</h3>
+                <p>Av. Guapira, 1118 - São Paulo, SP</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/connessione_seguros/" class="social-link" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="https://www.facebook.com/ConnessioneCorretoraDeSeguros/?locale=pt_BR" class="social-link" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="https://ul.waze.com/ul?place=ChIJ_1BOaHX2zpQRkRVXUvZSfo8&ll=-23.47575320%2C-46.59406510&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" class="social-link" target="_blank"><img src="img/wazelogo.jpg" alt="waze"></a>
+                <a href="https://api.whatsapp.com/send?phone=5511971535379" class="social-link" target="_blank"><img src="img/whatslogo.png" alt="whatsapp"></a>
+            </div>
+        </div>
+        <p class="footer-info">© 2024 Connessione Corretora de Seguros. Todos os direitos reservados.</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
