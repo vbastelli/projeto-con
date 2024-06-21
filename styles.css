@@ -39,7 +39,7 @@ html {
 }
 
 .logo {
-    height: 60px; /* Ajuste de altura para dispositivos móveis */
+    height: 100px; /* Ajuste de altura da logo para ser um pouco maior */
     width: auto;
 }
 
@@ -49,10 +49,7 @@ html {
     padding: 0;
     display: flex;
     flex-direction: row; /* Layout horizontal para itens do menu */
-}
-
-.menu ul li {
-    margin-right: 10px; /* Espaçamento entre os itens do menu */
+    gap: 20px; /* Espaçamento entre os itens do menu */
 }
 
 .menu ul li:last-child {
@@ -79,13 +76,14 @@ html {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
 }
 
 /* Texto principal */
 .texto {
-    max-width: 800px;
+    max-width: 900px;
     margin: 15px auto; /* Espaçamento ajustado */
-    padding: 10px; /* Espaçamento interno reduzido */
+    padding: 20px; /* Espaçamento interno reduzido */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -107,10 +105,11 @@ html {
     padding: 15px; /* Espaçamento interno reduzido */
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 500px;
 }
 
 .desde {
-    font-size: 1.5em; /* Tamanho de título ajustado para telas menores */
+    font-size: 1.8em; /* Tamanho de título ajustado para telas menores */
     margin-bottom: 10px; /* Espaçamento inferior reduzido */
     color: #BF1A1A;
 }
@@ -133,11 +132,15 @@ html {
 }
 
 .logo-seguradora img {
-    max-height: 50px; /* Tamanho máximo ajustado para as logos */
+    max-height: 80px; /* Tamanho máximo ajustado para as logos */
     max-width: 100%;
     padding: 8px; /* Espaçamento interno reduzido */
+    transition: transform 0.3s ease;
 }
 
+.logo-seguradora:hover img {
+    transform: scale(1.2); /* Scale up the image on hover */
+}
 /* Botão de cotação */
 .cotacao {
     background-color: #BF1A1A;
@@ -149,10 +152,13 @@ html {
     font-size: 1em; /* Tamanho de fonte ajustado para dispositivos móveis */
     margin-top: 20px;
     transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block; /* Certifique-se de que o elemento se comporta como um bloco inline */
 }
 
 .cotacao:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Formulário de contato */
@@ -163,6 +169,8 @@ html {
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-bottom: 40px;
+    width: 500px;
 }
 
 .contato h2 {
@@ -180,6 +188,7 @@ html {
 .campo-form {
     margin-bottom: 15px; /* Espaçamento entre os campos ajustado */
     text-align: left;
+    width: 300px;
 }
 
 .campo-form label {
@@ -211,11 +220,17 @@ html {
     cursor: pointer;
     border-radius: 12px;
     font-size: 1em; /* Tamanho de fonte ajustado para dispositivos móveis */
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Adiciona transição para transformação */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Makes the link behave like a button */
+    text-align: center; /* Centers text inside the link */
+    margin-top: 20px; /* Para consistência com a classe cotacao */
 }
 
 .botao-enviar:hover {
     background-color: #8C0B0B;
+    transform: scale(1.1); /* Adiciona efeito de escala */
+    cursor: pointer;
 }
 
 /* Rodapé */
@@ -262,56 +277,55 @@ footer {
 }
 
 /* Media Queries para dispositivos móveis */
+/* Media Queries for devices up to 768px wide */
 @media only screen and (max-width: 768px) {
+    /* Adjustments already made */
     .topo {
-        padding: 10px 15px; /* Reduzi ainda mais o padding do topo */
-    }
-
-    .logo {
-        height: 50px; /* Adjust logo size for smaller screens */
+        padding: 10px 15px;
     }
 
     .menu ul {
-        flex-direction: column; /* Change menu items to display vertically */
+        flex-direction: column;
     }
 
     .menu ul li {
-        margin-right: 0; /* Remove right margin from menu items */
-        margin-bottom: 10px; /* Add bottom margin between menu items */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .titulo {
-        font-size: 1.5em; /* Reduzi o tamanho do título para telas menores */
+        font-size: 1.5em;
     }
 
     .corpo {
-        font-size: 1em; /* Reduzi o tamanho do texto para telas menores */
+        font-size: 1em;
     }
 
     .foto,
     .texto,
     .card,
     .contato {
-        margin: 15px auto; /* Espaçamento reduzido para telas menores */
-        padding: 10px; /* Espaçamento interno reduzido */
+        margin: 15px auto;
+        padding: 10px;
     }
 
     .desde {
-        font-size: 1.2em; /* Tamanho de título ajustado para telas menores */
+        font-size: 1.2em;
     }
 
     .cotacao {
-        padding: 12px 24px; /* Espaçamento interno ajustado */
-        font-size: 1em; /* Tamanho de fonte ajustado para telas menores */
+        padding: 12px 24px;
+        font-size: 1em;
         margin-top: 20px;
     }
 
     .card {
-        padding: 15px; /* Espaçamento interno reduzido */
+        padding: 15px;
+        max-width: 100%;
     }
 
     .logos-seguradoras {
-        grid-template-columns: repeat(2, 1fr); /* Altera para 2 colunas em telas menores */
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
@@ -320,18 +334,14 @@ footer {
         gap: 20px;
     }
 
-    .social-links {
-        justify-content: center;
-    }
-
     .social-link img {
         width: 30px;
         height: 30px;
     }
 
     .contato {
-        padding: 20px; /* Espaçamento interno ajustado */
-        margin: 15px auto; /* Margem ajustada */
+        padding: 20px;
+        margin: 15px auto;
     }
 
     .formulario-contato {
@@ -347,51 +357,29 @@ footer {
     }
 
     .botao-enviar {
-        padding: 15px 30px; /* Espaçamento interno ajustado */
-        font-size: 1em; /* Tamanho de fonte ajustado para telas menores */
+        padding: 15px 30px;
+        font-size: 1em;
         margin-top: 20px;
     }
-}
+    .texto {
+        max-width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        word-wrap: break-word; /* Allow words to break onto the next line */
+    }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    width: 100%;
-    margin-top: auto;
-    position: relative;
-}
+    .contato {
+        max-width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        word-wrap: break-word; /* Allow words to break onto the next line */
+    }
+    .logo-seguradora {
+        height: auto; /* Allow height to adjust based on content */
+        max-height: 60px; /* Limit maximum height of logos */
+        max-width: 100%; /* Ensure logos do not exceed container width */
+    }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.location {
-    text-align: left;
-}
-
-.social-links {
-    display: flex;
-    gap: 10px;
-}
-
-.social-link img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-link img:hover {
-    transform: scale(1.1);
-}
-
-.footer-info {
-    margin-top: 20px;
-    font-size: 0.9em;
+    .logo-seguradora img {
+        max-height: 60px; /* Limit maximum height of images within logos */
+        max-width: 100%; /* Ensure images do not exceed container width */
+    }
 }
