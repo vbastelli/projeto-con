@@ -275,6 +275,12 @@ footer {
     margin-top: 20px;
     font-size: 0.9em;
 }
+.mensagem-sucesso {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 /* Media Queries para dispositivos móveis */
 /* Media Queries for devices up to 768px wide */

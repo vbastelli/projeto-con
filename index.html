@@ -72,7 +72,7 @@
     <!-- Formulário de Contato -->
     <section id="contato" class="contato">
         <h2>Entre em Contato</h2>
-        <form action="enviar_email.php" method="POST" class="formulario-contato">
+        <form id="formulario-contato" method="POST" class="formulario-contato">
             <div class="campo-form">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -85,10 +85,11 @@
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
             </div>
-            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+            <button type="submit" id="botao-enviar" class="botao-enviar">Enviar Mensagem</button>
+            <p id="mensagem-sucesso" class="mensagem-sucesso"></p>
         </form>
     </section>
-
+    
     <footer>
         <div class="footer-content">
             <div class="location">
