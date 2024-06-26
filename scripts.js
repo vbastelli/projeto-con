@@ -15,7 +15,6 @@ document.getElementById('formulario-contato').addEventListener('submit', functio
         mensagemSucesso.textContent = data;
         mensagemSucesso.style.display = 'block';
 
-        // Reinicia o formulário e altera o texto do botão
         form.reset();
         botaoEnviar.textContent = 'Enviar novamente';
     })

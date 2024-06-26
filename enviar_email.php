@@ -7,13 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($nome) || empty($email) || empty($mensagem)) {
         // Handle case where required fields are empty
-        echo "Todos os campos são obrigatórios.";
+        echo "<p>Todos os campos são obrigatórios.</p>";
         exit; // Stop further execution
     }
 
     // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "O email inserido não é válido.";
+        echo "<p>O email inserido não é válido.</p>";
         exit; // Stop further execution
     }
 
@@ -36,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Envia o email
     if (mail($destinatario, $assunto, $corpo_email, $headers)) {
         // Exibe mensagem de sucesso
-        echo "Email enviado com sucesso!";
+        echo "<p>Email enviado com sucesso!</p>";
     } else {
         // Exibe mensagem de erro
-        echo "Ocorreu um erro ao enviar o email.";
+        echo "<p>Ocorreu um erro ao enviar o email.</p>";
     }
 }
 ?>
